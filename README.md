@@ -14,9 +14,9 @@ Certain personal information is not checked into this repository. It must be
 provided before my resume can be built. See the [Setup](#setup) section for more 
 details.  
 
-Once personal contact information has been provided the `.tex` file must be 
-transformed into a more viewable format. See the [Building](#building) section 
-for more information.
+Once personal contact information has been provided the `resume.tex` file must 
+be transformed into a more viewable format. See the [Building](#building) 
+section for more information.
 
 This repository also provides some additional spell check related make targets. 
 Be sure to learn how to use these in the [Spell Check](#spell-check) section.
@@ -34,9 +34,19 @@ This information will appear just below my name in the header.
 
 # Spell Check
 Spelling is very important in a resume. This repository provides a couple make 
-targets to assist in the task of spell checking.  
+targets to assist in the task of spell checking. 
 
-To run a spell check on the resume, and any markdown files run the `spell` make 
+## Custom Dictionary
+These targets will use a custom technical words dictionary along with the aspell 
+GNU utility.  
+
+This custom dictionary is located in the `technical-words.aspell.en.pwd` file. 
+It contains technical words that are not considered official English words. 
+This allows the aspell utility to correctly spell check the repository. Without 
+any false positives. 
+
+## Targets
+To run spell check on the resume and any markdown files, run the `spell` make 
 target:
 
 ```bash
@@ -49,11 +59,8 @@ To check just the resume's spelling run the `spell-resume.tex` target:
 $ make spell-resume.tex
 ```
 
-This target will ignore certain technical words that appear in the resume, but 
-are not official English words.  
-
-To check just the markdown files in this repository for spelling run the 
-`spell-md` make target:
+To check just the markdown files in this repository run the `spell-md` make 
+target:
 
 ```
 $ make spell-md
@@ -72,5 +79,5 @@ $ # Or just `make`, b/c `resume` is the default target
 ```
 
 This target will run the `resume.dvi` target as a pre-requisite. And then view 
-the resulting `resume.dvi` file with xdvi in the `resume` target.
+the resulting `resume.dvi` file with xdvi in the `view-resume.dvi` target.
 
