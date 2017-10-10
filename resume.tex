@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[10pt]{article}
 
 % Setup
 % Local imports
@@ -16,6 +16,11 @@
 % and make lists compact
 \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 
+% Make sections compact
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{1.1\baselineskip}{\baselineskip}
+\titlespacing*{\subsection}{0pt}{1.1\baselineskip}{\baselineskip}
+
 % No section numbering
 \setcounter{secnumdepth}{0}
 
@@ -31,7 +36,7 @@
 	\input{privateContact.tex}
 	www.noahh.io $\cdot$ github.com/Noah-Huppert
 
-\vspace{3mm}
+%\vspace{3mm}
 %\hrule
 
 % Content
@@ -53,8 +58,16 @@
 % Skills
 \section{Skills}
 	\begin{tabularx}{\textwidth}{@{}ll@{} l X}
-	\textbf{Programming} & \\
-	\textbf{Languages:} & C++, C\#, Java, Python, JavaScript, Go, Rust, Swift, Ruby, HTML, CSS, SQL, PHP, Bash, LaTeX \\
+	\textbf{Programming} \\
+	\textbf{Languages:}
+
+	& 
+
+	\topskip0pt
+	\vspace*{\fill}
+	C++, C\#, Java, Python, JavaScript, Go, Rust, Swift, Ruby, HTML, CSS, SQL, PHP, Bash, LaTeX
+	\vspace*{\fill}
+
 	\end{tabularx}
 	\textbf{Software:} Git, GNU Make, CMake, Vim, Plugins for GApps, Google Sheets, Adobe Photoshop, GIMP, Blender, Intellij \\
 	\textbf{Operating Systems:} Windows, OS X, GNU Linux

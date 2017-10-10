@@ -1,10 +1,19 @@
-.PHONY: spell spell-resume.tex spell-md
+.PHONY: resume view-resume.dvi close-view-resume.dvi \
+	spell spell-resume.tex spell-md
 
-resume: resume.dvi
-	xdvi resume.dvi &
+resume: resume.dvi view-resume.dvi
 
-resume.dvi:
+clean-resume.dvi:
+	rm resume.dvi || true
+
+resume.dvi: clean-resume.dvi
 	latex resume.tex
+
+close-view-resume.dvi:
+	scripts/close-view-resume.sh
+
+view-resume.dvi: close-view-resume.dvi
+	scripts/view-resume.sh
 
 resume.pdf: resume.dvi
 	pdflatex resume.dvi

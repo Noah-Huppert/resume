@@ -10,6 +10,14 @@
 *.dvi
 *.log
 
+# PID files
+# Process Id Files (PID files) are used to keep track of process's launched by 
+# utilities. Like make.
+#
+# They store a unique number id of the process which is used to query and 
+# control the process via system apis.
+*.pid
+
 #
 # Repo Behavior Specific
 #
