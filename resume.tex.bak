@@ -39,7 +39,7 @@
 
 % Education
 \section{Education}
-	Drexel University \hfill Philadelphia, PA \\
+	Drexel University \hfill Philadephia, PA \\
 	Bachelor of Science in Computer Science \hfill Anticipated Graduation: June 2021 \\
 	Cumulative GPA: 3.29
 
@@ -54,7 +54,7 @@
 \section{Skills}
 	\begin{tabularx}{\textwidth}{@{}ll@{} l X}
 	\textbf{Programming} & \\
-	\textbf{Languages:} & C++, C\#, Java, Python, JavaScript, Go, Rust, Swift, Ruby, HTML, CSS, SQL, PHP, Bash, LaTeX \\
+	\textbf{Languages:} & C++, C\#, Java, Python, Javascript, Go, Rust, Swift, Ruby, HTML, CSS, SQL, PHP, Bash, LaTeX \\
 	\end{tabularx}
 	\textbf{Software:} Git, GNU Make, CMake, Vim, Plugins for GApps, Google Sheets, Adobe Photoshop, GIMP, Blender, Intellij \\
 	\textbf{Operating Systems:} Windows, OS X, GNU Linux
@@ -66,14 +66,14 @@
 	\textit{Programmer} \hfill June - Sept 2015, June 2016 - Present \\
 	\begin{itemize}
 		\item Collaborate with the design team to implement front end application views
-		\item Develop back end SMS chat bot logic which thousands of customers use
+		\item Develop backend SMS chat bot logic which thousands of customers use
 		\item Maintain and program new technologies to manage production infrastructure
 	\end{itemize}
 
 	% Nike
 	\vspace{1em}
 	\textbf{Nike} \hfill Remote \\
-	\textit{Back end Developer} \hfill May 2017 - August 2017 \\
+	\textit{Backend Developer} \hfill May 2017 - August 2017 \\
 	\begin{itemize}
 		\item Engineered image moderation system to assist multiple teams in their effort to moderate user content
 		\item Integrated 3rd party artificial intelligence vision APIs into system for increased reliability
@@ -104,7 +104,7 @@
 \section{Project Experience}
 	\begin{itemize}
 		\item Python I2C Register - Open Source Python library for common I2C controller register pattern
-		\item Inertial Motion Capture - Motion capture using IMUs - Maker Fair 2016 NYC
+		\item Inertial Motion Capture - Motion capture using IMUs - Maker Faire 2016 NYC
 		\item Leap Motion Marionettes - Virtual puppets controlled with a Leap Motion \& Unity3D - Maker Faire 2015 NYC
 		\item Super Blocks - Education math game - Maker Faire 2014 NYC
 		\item Leap Motion Mouse - Simulates a mouse where user is pointing using a Leap Motion
@@ -113,7 +113,7 @@
 % Activities
 \section{Activities}
 	Competitor, Penn Apps, 2017 \hfill Competitor, FIRST Robotics Competition, 2014 - 2016 \\
-	Mentor, First Lego League, 2015 \hfill Volunteer, Metro west Medical Clinic, 2009 - 2017
+	Mentor, First Lego League, 2015 \hfill Volunttaeer, Metrowest Medical Clinic, 2009 - 2017
 
 \end{flushleft}
 \end{document}

@@ -1,9 +1,19 @@
-.PHONY: all view-dvi
+.PHONY: spell spell-resume.tex spell-md
 
-all: tex view-dvi
+resume: resume.dvi
+	xdvi resume.dvi &
 
-tex:
+resume.dvi:
 	latex resume.tex
 
-view-dvi:
-	xdvi resume.dvi &
+resume.pdf: resume.dvi
+	pdflatex resume.dvi
+
+spell: spell-resume.tex spell-md
+spell-resume.tex:
+	aspell -t --add-tex-command="setitemize op" \
+	       --extra-dicts="./.aspell.en.pws" \
+	       -c resume.tex
+
+spell-md:
+	aspell -c *.md
