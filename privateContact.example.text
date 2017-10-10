@@ -1,0 +1,7 @@
+\documentclass{article}
+
+\begin{document}
+\centering
+	1234 Main St $\cdot$ Chicago, IL 60640 \\
+	(124) 816 - 3264 $\cdot$ name@host.tld \\
+\end{document}

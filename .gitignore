@@ -1,0 +1,24 @@
+#
+# Tools
+#
+
+# Vim
+*.swp
+
+# Tex
+*.aux
+*.dvi
+*.log
+
+#
+# Repo Behavior Specific
+#
+
+# privateContact.tex
+# Ignored so one can include private contact information in their resume without 
+# checking it in to public source control. And possibly getting spammed as a 
+# result.
+#
+# A sample privateContact.example.tex file will be provided. Which users are 
+# encouraged to copy and modify.
+privateContact.tex
