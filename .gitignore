@@ -7,8 +7,9 @@
 
 # Tex
 *.aux
-*.dvi
 *.log
+*.dvi
+*.pdf
 
 # PID files
 # Process Id Files (PID files) are used to keep track of process's launched by 
