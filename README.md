@@ -28,7 +28,7 @@ lists.
 
 This information must be provided in a gitignored `privateContact.tex` at build 
 time. To do so simply make a copy of `privateContact.example.tex` named 
-`privateContact.text`. Then fill in the private contact information.  
+`privateContact.tex`. Then fill in the private contact information.  
 
 This information will appear just below my name in the header.
 
