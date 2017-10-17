@@ -75,9 +75,26 @@ target:
 
 ```bash
 $ make resume
-$ # Or just `make`, b/c `resume` is the default target
 ```
 
-This target will run the `resume.dvi` target as a pre-requisite. And then view 
-the resulting `resume.dvi` file with xdvi in the `view-resume.dvi` target.
+As a shortcut one can just run `$ make`, and the `resume` target will be 
+executed by default.
 
+This target will transform the resume into the more universal `.dvi` format 
+with the `resume.dvi` target. Next xdvi, a `.dvi` viewer, will be used to open 
+and view this `resume.dvi` file. With the `view-resume.dvi` target.
+
+## PDF
+To transform this resume into a PDF file run the `resume.pdf` make target:
+
+```bash
+$ make resume.pdf
+```
+
+To view this `resume.pdf` file run the `view-resume.pdf` file:
+
+```bash
+$ make view-resume.pdf
+```
+
+This target will automatically update the `resume.pdf` file before viewing it.
