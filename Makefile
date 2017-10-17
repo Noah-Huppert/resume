@@ -34,11 +34,12 @@ view-resume.pdf: resume.pdf close-view-resume.pdf
 	scripts/view-resume.sh .pdf
 
 # Spelling
+# The SPELL_EXTRAS variable can be set by the target caller to specify additional 
+# aspell arguments
+SPELL_ARGS=--extra-dicts="./technical-words.aspell.en.pws" ${SPELL_EXTRAS}
 spell: spell-resume.tex spell-md
 spell-resume.tex:
-	aspell -t --add-tex-command="setitemize op" \
-	       --extra-dicts="./.aspell.en.pws" \
-	       -c resume.tex
+	aspell -t --add-tex-command="setitemize op" ${SPELL_ARGS} -c resume.tex
 
 spell-md:
-	aspell -c *.md
+	aspell ${SPELL_ARGS} -c *.md

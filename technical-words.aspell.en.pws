@@ -1,4 +1,5 @@
 personal_ws-1.1 en 16 
+gitignored
 cau
 Photoshop
 AdmitHub
@@ -15,3 +16,11 @@ PHP
 LaTeX
 ses
 GApps
+md
+dvi
+xdvi
+tex
+privateContact
+viewable
+aspell
+pdf
