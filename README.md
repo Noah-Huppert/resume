@@ -2,10 +2,14 @@
 My professional resume.
 
 # Table Of Contents
+- [View](#view)
 - [Overview](#overview)
 - [Setup](#setup)
 - [Spell Check](#spell-check)
 - [Building](#building)
+
+# [View](https://storage.googleapis.com/public-resume/resume.pdf)
+You can view my resume, with fake private contact information: **[here](https://storage.googleapis.com/public-resume/resume.pdf)**
 
 # Overview
 My resume is written in LaTeX. To view it it must be setup and built.  
