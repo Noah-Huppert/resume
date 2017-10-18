@@ -13,8 +13,6 @@ My professional resume.
 My resume is written in LaTeX. The most up to date copy can be viewed [here](https://storage.googleapis.com/public-resume/resume.pdf). This copy contains fake private 
 contact information.
 
-To view the resume with complete information it must be setup and built.  
-
 Certain personal information is not checked into this repository. It must be 
 provided before my resume can be built. See the [Setup](#setup) section for more 
 details.  
