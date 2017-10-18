@@ -18,9 +18,13 @@
 \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 
 % Make sections compact
-%\usepackage{titlesec}
-%\titlespacing*{\section}{0pt}{1.1\baselineskip}{\baselineskip}
-%\titlespacing*{\subsection}{0pt}{1.1\baselineskip}{\baselineskip}
+% More: https://tex.stackexchange.com/a/53341
+\usepackage{titlesec}
+
+% \titlespacing{command}{left spacing}{before spacing}{after spacing}[right]
+% {xpt plus ypt minus zpt} = x target, y amount allowed to expand, z amount 
+% allowed to collapse
+\titlespacing\section{0pt}{7pt plus 2pt minus 2pt}{7pt plus 2pt minus 2pt}
 
 % No section numbering
 \setcounter{secnumdepth}{0}
