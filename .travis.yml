@@ -1,0 +1,21 @@
+language: c
+install:
+  # Setup GCloud apt repo
+  - export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+  - echo "deb https://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+  - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+  - sudo apt-get update
+  - sudo apt-get install -y google-cloud-sdk texlive-full
+
+  # GCloud Auth
+  - echo "$GCLOUD_KEY_FILE" | base64 -d -i > ./travis-service-account.json
+  - gcloud auth activate-service-account --key-file ./travis-service-account.json
+script:
+  # Make private contact info the sample info
+  - cp privateContact.example.tex privateContact.tex
+
+  # Make PDF
+  - make resume.pdf
+after_success:
+  # Upload to GCS
+  - gsutil cp -a public-read resume.pdf gs://public-resume
