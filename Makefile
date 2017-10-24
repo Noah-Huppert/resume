@@ -1,6 +1,7 @@
 .PHONY: resume view-resume.dvi close-view-resume.dvi \
 	view-resume.pdf close-view-resume.pdf \
-	spell spell-resume.tex spell-md
+	spell spell-resume.tex spell-md \
+	upload
 
 # Resume
 resume: resume.dvi view-resume.dvi
@@ -43,3 +44,7 @@ spell-resume.tex:
 
 spell-md:
 	aspell ${SPELL_ARGS} -c *.md
+
+# Upload resume.pdf to gcs
+upload: resume.pdf
+	gsutil cp -a public-read resume.pdf gs://public-resume
