@@ -8,6 +8,9 @@
 \usepackage{geometry}
 \geometry{top=10in,margin=0.25in}
 
+% Indentation
+\usepackage{scrextend}
+
 % Special tables
 \usepackage{tabularx}
 
@@ -20,6 +23,10 @@
 % Make sections compact
 % More: https://tex.stackexchange.com/a/53341
 \usepackage{titlesec}
+
+% Multi Column Layouts
+\usepackage{multicol}
+\setlength\multicolsep{0pt}
 
 % \titlespacing{command}{left spacing}{before spacing}{after spacing}[right]
 % {xpt plus ypt minus zpt} = x target, y amount allowed to expand, z amount 
@@ -55,26 +62,26 @@
 
 % Coursework
 \section{Relevant Coursework}
-	\begin{tabularx}{\textwidth}{X X X}
-		Mathematical Foundations of CS & Advanced Prog. Tools \& Techniques & Computer Programming I, II \\
-		Computer \& Info Design I, II, II & Calculus II, III, IV & Linear Algebra \\
-	\end{tabularx}
+	\begin{addmargin}[1em]{1em}
+	\begin{multicols}{3}
+		Mathematical Foundations of CS \\
+		Computer \& Info Design I, II, II \\
+
+		Advanced Prog. Tools \& Techniques \\
+		Calculus II, III, IV \\
+
+		Computer Programming I, II \\
+		Linear Algebra 
+	\end{multicols} 
+	\end{addmargin}
+
 
 % Skills
 \section{Skills}
-	\begin{tabularx}{\textwidth}{@{}ll@{} l X}
-	\textbf{Programming} \\
-	\textbf{Languages:}
+	\textbf{Programming Languages:} C++, C\#, Java, Python, JavaScript, Go, Rust, Swift, Ruby, HTML, CSS, SQL, PHP, Bash, LaTeX
 
-	& 
-
-	\topskip0pt
-	\vspace*{\fill}
-	C++, C\#, Java, Python, JavaScript, Go, Rust, Swift, Ruby, HTML, CSS, SQL, PHP, Bash, LaTeX
-	\vspace*{\fill}
-
-	\end{tabularx}
 	\textbf{Software:} Git, GNU Make, CMake, Vim, Plugins for GApps, Google Sheets, Adobe Photoshop, GIMP, Blender, Intellij \\
+
 	\textbf{Operating Systems:} Windows, OS X, GNU Linux
 
 % Experience
