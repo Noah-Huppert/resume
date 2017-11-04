@@ -8,6 +8,7 @@ My professional resume.
 - [Setup](#setup)
 - [Spell Check](#spell-check)
 - [Building](#building)
+- [extra.tex file](#extratex-file)
 
 # Overview
 My resume is written in LaTeX. The most up to date copy can be viewed [here](https://storage.googleapis.com/public-resume/resume.pdf). This copy contains fake private 
@@ -101,3 +102,13 @@ $ make view-resume.pdf
 ```
 
 This target will automatically update the `resume.pdf` file before viewing it.
+
+# extra.tex file
+Often times companies require that you submit a set of essay responses with 
+you application.  
+
+Answers to these questions can be put in the `extra.tex` file. Which will be 
+included at the end of the `resume.tex` file. 
+
+I personally store all the `extra.tex`s that I write in another private 
+repository.
