@@ -104,10 +104,10 @@ $ make view-resume.pdf
 This target will automatically update the `resume.pdf` file before viewing it.
 
 # extra.tex file
-Often times companies require that you submit a set of essay responses with 
-you application.  
+Often times companies require that you submit a cover letter or set of essay responses with 
+your application.  
 
-Answers to these questions can be put in the `extra.tex` file. Which will be 
+This information can be put in the `extra.tex` file. Which will be 
 included at the end of the `resume.tex` file. 
 
 I personally store all the `extra.tex`s that I write in another private 
