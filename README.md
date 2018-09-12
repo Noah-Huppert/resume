@@ -8,7 +8,7 @@ My professional resume.
 - [Setup](#setup)
 - [Spell Check](#spell-check)
 - [Building](#building)
-- [extra.tex file](#extratex-file)
+- [Additional LaTeX Files](#additional-latex-files)
 
 # Overview
 My resume is written in LaTeX. The most up to date copy can be viewed 
@@ -91,9 +91,9 @@ To view this `resume.pdf` file run the `view-resume.pdf` file:
 
 This target will automatically update the `resume.pdf` file before viewing it.
 
-# extra.tex file
+# Additional LaTeX Files
 Often times companies require that you submit a cover letter or set of essay responses with your application.  
 
-This information can be put in the `extra.tex` file. Which will be included at the end of the `resume.tex` file. 
+If a `cover.tex` file is present it will be included before the resume content.  
 
-I personally store all the `extra.tex`s that I write in another private repository.
+If an `extra.tex` file is present it will be included after the resume content.  
