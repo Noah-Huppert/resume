@@ -3,6 +3,8 @@
 	spell spell-resume.tex spell-md \
 	upload rm-upload
 
+MAKE=make
+
 # Resume
 resume: resume.dvi view-resume.dvi
 
@@ -46,8 +48,11 @@ spell-md:
 	aspell ${SPELL_ARGS} -c *.md
 
 # Upload resume.pdf to gcs
-upload: resume.pdf
-	cat privateContact.tex | grep 'Example contact information'
+upload:
+	mv privateContact.tex privateContact.backup.tex
+	cp privateContact.example.tex privateContact.tex
+	${MAKE} resume.pdf
+	mv privateContact.backup.tex privateContact.tex
 	gsutil cp -a public-read resume.pdf gs://public-resume
 
 # Remove upload of resume.pdf from gcs
