@@ -1,7 +1,7 @@
 .PHONY: resume view-resume.dvi close-view-resume.dvi \
 	view-resume.pdf close-view-resume.pdf \
 	spell spell-resume.tex spell-md \
-	upload
+	upload rm-upload
 
 # Resume
 resume: resume.dvi view-resume.dvi
@@ -10,7 +10,7 @@ resume: resume.dvi view-resume.dvi
 clean-resume.dvi:
 	rm resume.dvi || true
 
-resume.dvi: clean-resume.dvi
+resume.dvi: resume.tex privateContact.tex clean-resume.dvi
 	latex resume.tex
 
 # resume.dvi - view
@@ -47,4 +47,9 @@ spell-md:
 
 # Upload resume.pdf to gcs
 upload: resume.pdf
+	cat privateContact.tex | grep 'Example contact information'
 	gsutil cp -a public-read resume.pdf gs://public-resume
+
+# Remove upload of resume.pdf from gcs
+rm-upload:
+	gsutil rm gs://public-resume/resume.pdf
