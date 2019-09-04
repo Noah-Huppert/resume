@@ -12,7 +12,7 @@ jobs:
     - name: Create fake private contact file
       run: cp privateContact.example.tex privateContact.tex
     - name: Compile resume LaTeX
-      uses: docker://aergus/latex@latest
+      uses: docker://aergus/latex:latest
       with:
         entrypoint: /bin/bash
         args: make resume.pdf
