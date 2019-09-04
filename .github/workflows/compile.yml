@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install dependencies
-      run: apt-get install texlive-full
+      run: sudo apt-get install texlive-full
     - name: Create fake private contact file
       run: cp privateContact.example.tex privateContact.tex
     - name: Compile resume LaTeX
