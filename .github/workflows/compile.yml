@@ -9,10 +9,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: Install dependencies
+      run: apt-get install texlive-full
     - name: Create fake private contact file
       run: cp privateContact.example.tex privateContact.tex
     - name: Compile resume LaTeX
-      uses: docker://aergus/latex:latest
-      with:
-        entrypoint: /bin/bash
-        args: make resume.pdf
+      run: make resume.pdf
