@@ -13,4 +13,6 @@ jobs:
       run: cp privateContact.example.tex privateContact.tex
     - name: Compile resume LaTeX
       uses: docker://aergus/latex@latest
-      run: make resume.pdf
+      with:
+        entrypoint: /bin/bash
+        args: make resume.pdf
