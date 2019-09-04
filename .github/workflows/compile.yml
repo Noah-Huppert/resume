@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Create fake private contact file
+      run: cp privateContact.example.tex privateContact.tex
+    - name: Compile resume LaTeX
+      uses: docker://aergus/latex@latest
+      run: make resume.pdf
