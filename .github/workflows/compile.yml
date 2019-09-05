@@ -1,4 +1,4 @@
-name: CI
+name: Compile
 
 on: [push]
 
@@ -9,9 +9,25 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+      
     - name: Install dependencies
-      run: sudo apt-get install texlive-full
+      run: |
+        export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+        echo "deb https://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+        curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+        sudo apt-get -qq update
+        sudo apt-get install -y google-cloud-sdk texlive-full
+
+    - name: Authenticate with GCP
+      run: |
+        (echo "$GCP_KEY_FILE" | base64 -d | tee /tmp/gcp-account.json) &> /dev/null
+        gcloud auth activate-service-account --key-file /tmp/gcp-account.json
+      
     - name: Create fake private contact file
       run: cp privateContact.example.tex privateContact.tex
+      
     - name: Compile resume LaTeX
       run: make resume.pdf
+
+    - name: Upload resume to GCP
+      run: gsutil cp -a public-read resume.pdf gs://public-resume
