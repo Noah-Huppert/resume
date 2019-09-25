@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
 
 # Install dependencies
+ENV DEBIAN_FRONTEND=noninteractive # So we don't get prompted when installing stuff
 RUN apt-get update
 RUN apt-get install -y texlive-full curl
 
@@ -18,4 +19,3 @@ USER resume
 RUN mkdir resume
 WORKDIR /home/resume/resume
 COPY --chown=resume:resume . /home/resume/resume
-
