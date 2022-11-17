@@ -1,0 +1,7 @@
+services:
+  latex:
+    build:
+      context: .
+    volumes:
+      - ./:/home/resume/resume/
+    restart: always
