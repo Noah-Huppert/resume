@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 # So we don't get prompted when installing stuff
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
-RUN apt-get install -y texlive-full curl apt-transport-https ca-certificates gnupg make
+RUN apt-get install -y texlive-full curl apt-transport-https ca-certificates gnupg make aspell
 
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
