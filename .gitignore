@@ -30,7 +30,8 @@
 #
 # A sample privateContact.example.tex file will be provided. Which users are 
 # encouraged to copy and modify.
-privateContact.tex
+privateContact*.tex
+!privateContact.example.text
 
 # extra.tex
 # Ignored so job application specific information can be added to the resume.
