@@ -26,7 +26,7 @@ view-resume.dvi: resume.dvi close-view-resume.dvi
 clean-resume.pdf:
 	rm resume.pdf || true
 
-resume.pdf: clean-resume.pdf resume.dvi
+resume.pdf: clean-resume.pdf resume.dvi spell-resume.tex
 	dvipdfm resume.dvi
 
 # resume.pdf - view
