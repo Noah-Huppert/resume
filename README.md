@@ -1,5 +1,3 @@
-# [View Resume.pdf](https://storage.googleapis.com/public-resume/resume.pdf)
-
 # Resume
 My professional resume.
 
