@@ -20,3 +20,5 @@ USER resume
 RUN mkdir resume
 WORKDIR /home/resume/resume
 #COPY --chown=resume:resume . /home/resume/resume
+
+CMD [ "bash", "-c", "sleep infinity" ]
